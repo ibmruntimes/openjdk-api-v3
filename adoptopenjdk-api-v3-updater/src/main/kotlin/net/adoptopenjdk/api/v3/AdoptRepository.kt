@@ -100,6 +100,7 @@ class AdoptRepositoryImpl @Inject constructor(
                 getRepoDataAsync("openjdk$version-nightly", getFun),
                 getRepoDataAsync("openjdk$version-binaries", getFun),
                 getRepoDataAsync("openjdk$version-upstream-binaries", getFun)
+                getRepoDataAsync("semeru$version-binaries", getFun),
             )
                 .map { repo -> repo.await() }
         }
